@@ -24,7 +24,7 @@ for (i in 1:nrow(Prokaryotes_filtered)) {
    if (sum(str_detect(string = metadata[,1], pattern = "geographic location")) == 1) {
     location[i] <- metadata[str_detect(string = metadata[,1], pattern = "geographic location"),2]} else {location[i] <- "not found"}
   if (sum(str_detect(string = metadata[,1], pattern = "source")) == 1) {
-    source[i] <- metadata[str_detect(string = metadata[,1], pattern = "source"),2]} else {source[i] <- "not found"}
+    source[i] <- metadata[str_detect(string = metadata[,1], pattern = "\\bsource\\b"),2]} else {source[i] <- "not found"}
   if (sum(str_detect(string = metadata[,1], pattern = "host")) == 1) {
     host[i] <- metadata[str_detect(string = metadata[,1], pattern = "host"),2]} else {host[i] <- "not found"}
   if (sum(str_detect(string = metadata[,1], pattern = "strain")) == 1) {
